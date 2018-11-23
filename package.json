@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.10.0",
     "gulp-coffee": "^3.0.3",
@@ -19,7 +20,12 @@
     "gulp-watch": "^5.0.1"
   },
   "devDependencies": {
-    "coffee-script": "^1.12.7"
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "coffee-script": "^1.12.7",
+    "gulp-babel": "^7.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
