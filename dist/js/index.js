@@ -3,24 +3,43 @@
  */
 
  (function(root){
+    var initNum = 0;
+    
     var imax = function(){
         this.version = 'v0.1.0'
     }
+    //数字逐渐增加
+    imax.numUp = function(id,num){
+        var num = parseInt(num);
+        var step = 12;
+        var stepnum = num / step;
+        $(id).text(0);
+        var timer = setInterval(function(){
+            if(stepnum * initNum < num){
+                initNum ++;
+                $(id).text(parseInt(stepnum * initNum));
+            }else if(stepnum * initNum == num){
+                clearInterval(timer);
+            }
+        },45)
+    }
     //初始化loading
-    imax.loding = function(){
+    imax.loding = function(dtd){
         setInterval(function(){
             $("#loading").find('img').show();
-        },500)
+        },200)
         setTimeout(function(){
             $("#loading").hide();
-        },4000)
+            dtd.resolve();
+        },3000)
+        return dtd;
     }
     //初始化时间
     imax.timer = function(selector){
         Date.prototype.Format = function(fmt){ 
             var o = {   
-            "M+" : this.getMonth()+1,     
-            "d+" : this.getDate(),                  
+            "M+" : this.getMonth()+1,
+            "d+" : this.getDate(),
             "h+" : this.getHours(),                 
             "m+" : this.getMinutes(),                
             "s+" : this.getSeconds(),                
@@ -47,6 +66,7 @@
             transform: 'scale('+wbit+','+hbit+')'
         })
     }
+    //地图初始化
     imax.mapes = function(){
         setTimeout(function(){
             var mp = new BMap.Map("mapcontent");
@@ -64,7 +84,7 @@
             },
             grid: {
                 left: '2%',
-                right: '4%',
+                right: '5%',
                 bottom: '2%',
                 top: '10%',
                 containLabel: true
