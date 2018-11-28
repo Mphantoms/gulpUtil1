@@ -27,7 +27,7 @@
     imax.loding = function(dtd){
         setInterval(function(){
             $("#loading").find('img').show();
-        },200)
+        },50)
         setTimeout(function(){
             $("#loading").hide();
             dtd.resolve();
@@ -72,16 +72,13 @@
             var mp = new BMap.Map("mapcontent");
             mp.setMapStyle({style: 'midnight'});
             mp.enableScrollWheelZoom();
-            mp.centerAndZoom(new BMap.Point(121.48789949,31.24916171), 18);
+            mp.centerAndZoom(new BMap.Point(121.48789949,31.24916171), 13);
         },0)
     }
-    //初始化echrts
+    //初始化echrts折现图
     imax.echart = function(data){
         var myChart = echarts.init(document.getElementById('main'));
         option = {
-            tooltip: {
-                trigger: 'axis'
-            },
             grid: {
                 left: '2%',
                 right: '5%',
@@ -92,9 +89,9 @@
             xAxis: {
                 type: 'category',
                 boundaryGap: false,
+                splitLine:{show: false},
                 data: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23],
                 axisLabel: {
-                    show: true,
                     textStyle: {
                         color: '#fff',
                         fontSize: 18
@@ -109,8 +106,8 @@
             },
             yAxis: {
                 type: 'value',
+                splitLine:{show: false},
                 axisLabel: {
-                    show: true,
                     textStyle: {
                         color: '#fff',
                         fontSize: 18
@@ -125,13 +122,95 @@
                 splitNumber : 2,
                 nameGap: 30,
                 min:0,
-                max:function(value) {
-                    return value.max - 20;
-                }
             },
             series: data
         };
         myChart.setOption(option);
     }
+    //初始化echrts饼图
+    imax.echart2 = function(){
+        var myChart = echarts.init(document.getElementById('vdata'));
+        option = {
+            tooltip : {
+                trigger: 'item',
+                formatter: "{b} : {c} ({d}%)"
+            },
+            legend: {
+                x: 'center',
+                bottom: '20',
+                textStyle: '#fff',
+                data: [
+                    {
+                        name: '陌生人',
+                        icon: 'circle',
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    {
+                        name: '访问2-3次',
+                        icon: 'circle',
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    {
+                        name: '经常出入',
+                        icon: 'circle',
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    }
+                ]
+            },
+            series : [
+                {
+                    name: '访问来源',
+                    type: 'pie',
+                    radius : '55%',
+                    center: ['50%', '40%'],
+                    data:[
+                        {value:335, name:'陌生人'},
+                        {value:310, name:'访问2-3次'},
+                        {value:234, name:'经常出入'},
+                    ],
+                    itemStyle: {
+                        color: function(res){
+                            if(res.dataIndex==0){
+                                return '#65F5F3'
+                            }else if(res.dataIndex==1){
+                                return '#1E9FFF'
+                            }else if(res.dataIndex==2){
+                                return '#277ACE'
+                            }
+                        },
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)',
+                        }
+                    }
+                }
+            ]
+        };
+        myChart.setOption(option);
+    }
+    //轮播图
+    imax.swiper = function(){
+        var mySwiper = new Swiper ('.swiper-container', {
+            direction: 'horizontal', // 垂直切换选项
+            loop: true, // 循环模式选项
+            // 如果需要分页器
+            pagination: {
+              el: '.swiper-pagination',
+            },
+            // 如果需要前进后退按钮
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+        })
+    }
+
     root.imax = imax;
  })(this)

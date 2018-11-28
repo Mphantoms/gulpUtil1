@@ -7,6 +7,9 @@ body{
     height: 1080px;
     transform-origin: 0 0;
     transform: scale(1,1);
+    .BMap_mask{
+        background: none;
+    }
 }
 
 @mixin position($position) {
@@ -57,10 +60,10 @@ body{
            @include rl;
             float: left;
             p{
-                font-size: 40px;
+                font-size: 36px;
                 color: #06AEF5;
                 span{
-                    font-size: 60px;
+                    font-size: 50px;
                     color: yellow;
                 }
             }
@@ -69,7 +72,7 @@ body{
             @include rl;
             float: right;
             p{
-                font-size: 26px;
+                font-size: 24px;
                 color: #fff;
                 text-align: right;
             }
@@ -80,7 +83,7 @@ body{
             float: left;
             position: relative;
             h1{
-                font-size: 36px;
+                font-size: 34px;
                 font-weight: normal;
                 position: relative;
                 top: -20px;
@@ -93,7 +96,7 @@ body{
                 background-size: 100%;
                 width: 100%;
                 position: absolute;
-                top: 60px;
+                top: 48px;
                 left: 0;
             }
         }
@@ -115,6 +118,37 @@ body{
                     font-size: 20px;
                     text-align: center;
                     line-height: 70px;
+                    li{
+                        float: left;
+                        border-bottom: 2px solid #23569D;
+                        
+                    }
+                    li:first-child{
+                        width: 35%;
+                    }
+                    li:last-child{
+                        width: 65%;
+                    }
+                }
+                .lcontent2{
+                    li{
+                        height: 101px !important;
+                        .lileft,.liright{
+                            line-height: 101px !important;
+                            width: 35% !important;
+                            text-align: center;
+                            height: 99px !important;
+                            img{
+                                display: block;
+                                height: 90%;
+                                max-width: 90%;
+                                margin: 8% auto;
+                            }
+                        }
+                        .liright{
+                            width: 65% !important;
+                        }
+                    }
                 }
                 @mixin listyle {
                     line-height: 60px;
@@ -167,6 +201,12 @@ body{
                 }
             }
         }
+        .map2{
+            width: 1120px;
+        }
+        .video2{
+            margin: 0 10px;
+        }
         .video{
             width: 560px;
             height: 100%;
@@ -195,7 +235,6 @@ body{
                 margin-bottom: 20px;
                 .videolist{
                     height: 340px;
-                    
                     ul li{
                         width: 260px;
                         margin: 10px;
@@ -269,6 +308,28 @@ body{
                     }
                 }
             }
+            .vbot1{
+                @extend .vbot;
+                width: 275px;
+                float: left;
+                #vdata{
+                    height: 310px;
+                }
+            }
+            .vbot2{
+                @extend .vbot;
+                width: 275px;
+                float: right;
+                .swiper-container{
+                    height: 310px;
+                    img{
+                        width: 80%;
+                        height: 90%;
+                        margin: 5% auto;
+                        display: block;
+                    }
+                }
+            }
         }
     }
     .footer{
@@ -279,8 +340,8 @@ body{
             float: left;
             img{
                 width: 240px;
-                height: 120px;
-                margin-top: 15px;
+                height: 100px;
+                margin-top: 25px;
             }
         }
         .alldata{
@@ -289,14 +350,14 @@ body{
             float: left;
             .datacont{
                 width: 315px;
-                height: 120px;
-                margin-top: 15px;
+                height: 100px;
+                margin-top: 25px;
                 border-left: 5px solid #06AEF5;
                 
                 p{
                     color: #fff;
                     font-size: 20px;
-                    padding-top: 25px;
+                    padding-top: 20px;
                     padding-left: 15px;
                     span{
                         float: right;
@@ -308,6 +369,7 @@ body{
             width: 1380px;
             height: 100%;
             float: left;
+            margin-top: 5px;
             .cheader{
                 height: 38px;
                 p{
@@ -319,18 +381,18 @@ body{
                 .labels{
                     float: right;
                     position: relative;
-                    top: 15px;
+                    top: 14px;
                     right: 20px;
                     color: #fff;
-                    width: 200px;
-                    line-height: 20px;
+                    width: 105px;
+                    line-height: 14px;
                     .back1,.back2,span{
                         float: left;
-                        font-size: 18px;
+                        font-size: 14px;
                     }
                     .back1,.back2{
-                        width: 20px;
-                        height: 20px;
+                        width: 14px;
+                        height: 14px;
                         margin-left: 10px;
                     }
                     .back1{

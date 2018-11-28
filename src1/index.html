@@ -7,6 +7,7 @@
     <title>聚事通智能安防系统</title>
     <link rel="stylesheet" href="css/h5reset.css">
     <link rel="stylesheet" href="css/commen.css">
+    <link rel="stylesheet" href="./lib/swiper/swiper.min.css">
 </head>
 <body>
     <div id="loading">
@@ -27,34 +28,10 @@
             </div>
         </div>
         <div class="bodyer">
-            <div class="list">
-                <div class="arealist">
-                    <div class="lheader">各区人流量排名</div>
-                    <div class="lcontent">
-                        <ul>
-                            <li>
-                                <div class="lileft">NO.1</div>
-                                <div class="liright">我是这么的</div>
-                                <div class="line"></div>
-                            </li>
-                            <li>
-                                    <div class="lileft">NO.1</div>
-                                    <div class="liright">我是这么的</div>
-                                    <div class="line"></div>
-                                </li>
-                                <li>
-                                        <div class="lileft">NO.1</div>
-                                        <div class="liright">我是这么的</div>
-                                        <div class="line"></div>
-                                    </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="map">
+            <div class="map map2">
                 <div id="mapcontent"></div>
             </div>
-            <div class="video">
+            <div class="video video2">
                 <div class="vtop">
                     <div class="title">
                         <h3>探头实时监控</h3>
@@ -81,46 +58,78 @@
                         </ul>
                     </div> 
                 </div>
-                <div class="vbot">
-                    <div class="title">
-                        <h3>比对识别人像库</h3>
-                        <span>\02</span>
+                <div class="box">
+                    <div class="vbot1">
+                        <div class="title">
+                            <h3>流动人口分布</h3>
+                            <span>\02</span>
+                        </div>
+                        <div id="vdata">
+
+                        </div>
                     </div>
-                    <div class="vtable">
-                        <div class="theader">
-                            <ul>
-                                <li>现场图片</li>
-                                <li>源图片</li>
-                                <li>相识度</li>
-                                <li>时间</li>
-                            </ul>
+                    <div class="vbot2">
+                        <div class="title">
+                            <h3>黑名单监控</h3>
+                            <span>\03</span>
                         </div>
-                        <div class="tbody">
-                            <div class="trow">
-                                <ul>
-                                    <li><img src="./img/face.jpg" alt=""></li>
-                                    <li><img src="./img/face.jpg" alt=""></li>
-                                    <li>57.87</li>
-                                    <li>2018-11-22 09:49:33</li>
-                                </ul>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543393536693&di=b2d2bcf088f3516bbd8b6f2567c713b8&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D142649855%2C1472017909%26fm%3D214%26gp%3D0.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543393531378&di=036ccd67408bf6f4755caf2fde4f607f&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201502%2F09%2F20150209225315_WHVGT.jpeg" alt=""></div>
+                                <div class="swiper-slide"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543393531378&di=afdd08d9e6f618a53017317faaf52092&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201411%2F19%2F20141119223949_zyU4C.thumb.700_0.jpeg" alt=""></div>
                             </div>
-                            <div class="trow">
-                                <ul>
-                                    <li><img src="./img/face.jpg" alt=""></li>
-                                    <li><img src="./img/face.jpg" alt=""></li>
-                                    <li>57.87</li>
-                                    <li>2018-11-22 09:49:33</li>
-                                </ul>
-                            </div>
-                            <div class="trow">
-                                <ul>
-                                    <li><img src="./img/face.jpg" alt=""></li>
-                                    <li><img src="./img/face.jpg" alt=""></li>
-                                    <li>57.87</li>
-                                    <li>2018-11-22 09:49:33</li>
-                                </ul>
-                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+                <div class="arealist">
+                    <div class="lheader">
+                        <ul>
+                            <li>头像</li>
+                            <li>时间</li>
+                        </ul>
+                    </div>
+                    <div class="lcontent lcontent2">
+                        <ul>
+                            <li>
+                                <div class="lileft"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543393531372&di=40dcac7dfb2fa432a1131ea136ddb0eb&imgtype=0&src=http%3A%2F%2Fimg.name2012.com%2Fuploads%2Fallimg%2F180521%2F13505W212-0.jpg" alt=""/></div>
+                                <div class="liright">我是这么的</div>
+                                <div class="line"></div>
+                            </li>
+                            <li>
+                                <div class="lileft"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543393531372&di=385975a41f4cae5dd2f0c8de93b8beec&imgtype=0&src=http%3A%2F%2Fwww.beihaiting.com%2Fuploads%2Fallimg%2F180805%2F10723-1PP50ZG1211.jpg" alt=""/></div>
+                                <div class="liright">我是这么的</div>
+                                <div class="line"></div>
+                            </li>
+                            <li>
+                                <div class="lileft"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543393531378&di=2f8ea8e5b287425283cea7f3d8f99b0a&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201504%2F20%2F20150420H3141_ES4kU.thumb.700_0.jpeg" alt=""/></div>
+                                <div class="liright">我是这么的</div>
+                                <div class="line"></div>
+                            </li>
+                            <li>
+                                <div class="lileft"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543394661246&di=7b4dbf8c80c6c2f76410be9b646295bf&imgtype=jpg&src=http%3A%2F%2Fimg2.imgtn.bdimg.com%2Fit%2Fu%3D3695896267%2C3833204074%26fm%3D214%26gp%3D0.jpg" alt=""/></div>
+                                <div class="liright">我是这么的</div>
+                                <div class="line"></div>
+                            </li>
+                            <li>
+                                <div class="lileft"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543393531374&di=7e91232d658fa5ecc81a0d2f775c963d&imgtype=0&src=http%3A%2F%2Fimg4q.duitang.com%2Fuploads%2Fitem%2F201502%2F03%2F20150203130220_tCvvk.jpeg" alt=""/></div>
+                                <div class="liright">我是这么的</div>
+                                <div class="line"></div>
+                            </li>
+                            <li>
+                                <div class="lileft"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543393531374&di=40eb62c78e44b1fc95dae4ae3a5de535&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F07%2F20150307133934_TdHse.jpeg" alt=""/></div>
+                                <div class="liright">我是这么的</div>
+                                <div class="line"></div>
+                            </li>
+                            <li>
+                                <div class="lileft"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543393531374&di=91a6faec8ae01312f8945c2a5c39f2ce&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201507%2F13%2F20150713191510_SePyG.jpeg" alt=""/></div>
+                                <div class="liright">我是这么的</div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -151,15 +160,13 @@
     </div>
     <script src="./lib/jquery-2.2.4.js"></script>
     <script src="./lib/particles.min.js"></script>
+    <script src="./lib/swiper/swiper.min.js"></script>
     <script src="./lib/app.js"></script>
     <script src="./lib/echarts.common.min.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=xsWnxP6SzrHr0fdvya9ROjHUEKDLzUEP"></script>
     <script src="./js/index.js"></script>
     <script>
         var dtd = $.Deferred();
-        
-
-        //imax.loding();
         $.when(imax.loding(dtd)).done(function(){
             //console.log(100);
             var data = [
@@ -168,20 +175,20 @@
                     type:'line',
                     stack: '总量',
                     itemStyle : {  
-                        normal : {  
+                        normal : {
                             lineStyle:{  
                                 color:'yellow'  
                             }  
                         }  
                     },  
-                    data:[20, 40]
+                    data:[20, 40,15,550,420,110,20, 40,50,100,1000,155,100,160,15,550,420,110,50,100,1000,155,100,160]
                 },
                 {
                     name:'昨日',
                     type:'line',
                     stack: '总量',
                     itemStyle : {  
-                        normal : {  
+                        normal : { 
                             lineStyle:{  
                                 color:'red'  
                             }  
@@ -192,10 +199,12 @@
             ];
             imax.echart(data);
             imax.numUp("#upnum",4111);
+            imax.echart2();
         })
         imax.mapes();
         imax.init();
         imax.timer('.right p');
+        imax.swiper();
         $(window).resize(function(){
             imax.init();
         })

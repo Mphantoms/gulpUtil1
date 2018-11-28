@@ -7,6 +7,8 @@ body {
   height: 1080px;
   transform-origin: 0 0;
   transform: scale(1, 1); }
+  body .BMap_mask {
+    background: none; }
 
 #loading {
   width: 100%;
@@ -56,17 +58,17 @@ body {
       height: 100%;
       float: left; }
       .wrap .header .left p {
-        font-size: 40px;
+        font-size: 36px;
         color: #06AEF5; }
         .wrap .header .left p span {
-          font-size: 60px;
+          font-size: 50px;
           color: yellow; }
     .wrap .header .right {
       width: 520px;
       height: 100%;
       float: right; }
       .wrap .header .right p {
-        font-size: 26px;
+        font-size: 24px;
         color: #fff;
         text-align: right; }
     .wrap .header .center {
@@ -75,7 +77,7 @@ body {
       float: left;
       position: relative; }
       .wrap .header .center h1 {
-        font-size: 36px;
+        font-size: 34px;
         font-weight: normal;
         position: relative;
         top: -20px;
@@ -87,7 +89,7 @@ body {
         background-size: 100%;
         width: 100%;
         position: absolute;
-        top: 60px;
+        top: 48px;
         left: 0; }
   .wrap .bodyer {
     height: 800px; }
@@ -106,6 +108,27 @@ body {
           font-size: 20px;
           text-align: center;
           line-height: 70px; }
+          .wrap .bodyer .list .arealist .lheader li {
+            float: left;
+            border-bottom: 2px solid #23569D; }
+          .wrap .bodyer .list .arealist .lheader li:first-child {
+            width: 35%; }
+          .wrap .bodyer .list .arealist .lheader li:last-child {
+            width: 65%; }
+        .wrap .bodyer .list .arealist .lcontent2 li {
+          height: 101px !important; }
+          .wrap .bodyer .list .arealist .lcontent2 li .lileft, .wrap .bodyer .list .arealist .lcontent2 li .liright {
+            line-height: 101px !important;
+            width: 35% !important;
+            text-align: center;
+            height: 99px !important; }
+            .wrap .bodyer .list .arealist .lcontent2 li .lileft img, .wrap .bodyer .list .arealist .lcontent2 li .liright img {
+              display: block;
+              height: 90%;
+              max-width: 90%;
+              margin: 8% auto; }
+          .wrap .bodyer .list .arealist .lcontent2 li .liright {
+            width: 65% !important; }
         .wrap .bodyer .list .arealist .lcontent li {
           height: 58px;
           color: #fff;
@@ -149,6 +172,10 @@ body {
         margin: 0 auto; }
         .wrap .bodyer .map #mapcontent .anchorBL {
           display: none; }
+    .wrap .bodyer .map2 {
+      width: 1120px; }
+    .wrap .bodyer .video2 {
+      margin: 0 10px; }
     .wrap .bodyer .video {
       width: 560px;
       height: 100%;
@@ -199,36 +226,51 @@ body {
           .wrap .bodyer .video .vtop .videolist object {
             position: relative;
             z-index: 2; }
-      .wrap .bodyer .video .vbot {
+      .wrap .bodyer .video .vbot, .wrap .bodyer .video .vbot1, .wrap .bodyer .video .vbot2 {
         height: 370px;
         border-top: 5px solid #23569D;
         background: #fff2; }
-        .wrap .bodyer .video .vbot .theader, .wrap .bodyer .video .vbot .tbody .trow {
+        .wrap .bodyer .video .vbot .theader, .wrap .bodyer .video .vbot1 .theader, .wrap .bodyer .video .vbot2 .theader, .wrap .bodyer .video .vbot .tbody .trow, .wrap .bodyer .video .vbot1 .tbody .trow, .wrap .bodyer .video .vbot2 .tbody .trow {
           height: 40px;
           line-height: 40px;
           border-bottom: 2px solid #23569D;
           font-size: 22px;
           color: #fff; }
-          .wrap .bodyer .video .vbot .theader li, .wrap .bodyer .video .vbot .tbody .trow li {
+          .wrap .bodyer .video .vbot .theader li, .wrap .bodyer .video .vbot1 .theader li, .wrap .bodyer .video .vbot2 .theader li, .wrap .bodyer .video .vbot .tbody .trow li, .wrap .bodyer .video .vbot1 .tbody .trow li, .wrap .bodyer .video .vbot2 .tbody .trow li {
             float: left;
             text-align: center;
             height: 100%; }
-          .wrap .bodyer .video .vbot .theader li:first-child, .wrap .bodyer .video .vbot .tbody .trow li:first-child {
+          .wrap .bodyer .video .vbot .theader li:first-child, .wrap .bodyer .video .vbot1 .theader li:first-child, .wrap .bodyer .video .vbot2 .theader li:first-child, .wrap .bodyer .video .vbot .tbody .trow li:first-child, .wrap .bodyer .video .vbot1 .tbody .trow li:first-child, .wrap .bodyer .video .vbot2 .tbody .trow li:first-child {
             width: 120px; }
-          .wrap .bodyer .video .vbot .theader li:nth-child(2), .wrap .bodyer .video .vbot .tbody .trow li:nth-child(2) {
+          .wrap .bodyer .video .vbot .theader li:nth-child(2), .wrap .bodyer .video .vbot1 .theader li:nth-child(2), .wrap .bodyer .video .vbot2 .theader li:nth-child(2), .wrap .bodyer .video .vbot .tbody .trow li:nth-child(2), .wrap .bodyer .video .vbot1 .tbody .trow li:nth-child(2), .wrap .bodyer .video .vbot2 .tbody .trow li:nth-child(2) {
             width: 120px; }
-          .wrap .bodyer .video .vbot .theader li:nth-child(3), .wrap .bodyer .video .vbot .tbody .trow li:nth-child(3) {
+          .wrap .bodyer .video .vbot .theader li:nth-child(3), .wrap .bodyer .video .vbot1 .theader li:nth-child(3), .wrap .bodyer .video .vbot2 .theader li:nth-child(3), .wrap .bodyer .video .vbot .tbody .trow li:nth-child(3), .wrap .bodyer .video .vbot1 .tbody .trow li:nth-child(3), .wrap .bodyer .video .vbot2 .tbody .trow li:nth-child(3) {
             width: 80px; }
-          .wrap .bodyer .video .vbot .theader li:nth-child(4), .wrap .bodyer .video .vbot .tbody .trow li:nth-child(4) {
+          .wrap .bodyer .video .vbot .theader li:nth-child(4), .wrap .bodyer .video .vbot1 .theader li:nth-child(4), .wrap .bodyer .video .vbot2 .theader li:nth-child(4), .wrap .bodyer .video .vbot .tbody .trow li:nth-child(4), .wrap .bodyer .video .vbot1 .tbody .trow li:nth-child(4), .wrap .bodyer .video .vbot2 .tbody .trow li:nth-child(4) {
             width: 240px; }
-        .wrap .bodyer .video .vbot .tbody .trow {
+        .wrap .bodyer .video .vbot .tbody .trow, .wrap .bodyer .video .vbot1 .tbody .trow, .wrap .bodyer .video .vbot2 .tbody .trow {
           height: 86px;
           line-height: 86px; }
-          .wrap .bodyer .video .vbot .tbody .trow img {
+          .wrap .bodyer .video .vbot .tbody .trow img, .wrap .bodyer .video .vbot1 .tbody .trow img, .wrap .bodyer .video .vbot2 .tbody .trow img {
             height: 80px;
             width: auto;
             max-width: 120px;
             margin: 3px auto;
+            display: block; }
+      .wrap .bodyer .video .vbot1 {
+        width: 275px;
+        float: left; }
+        .wrap .bodyer .video .vbot1 #vdata {
+          height: 310px; }
+      .wrap .bodyer .video .vbot2 {
+        width: 275px;
+        float: right; }
+        .wrap .bodyer .video .vbot2 .swiper-container {
+          height: 310px; }
+          .wrap .bodyer .video .vbot2 .swiper-container img {
+            width: 80%;
+            height: 90%;
+            margin: 5% auto;
             display: block; }
   .wrap .footer {
     height: 150px; }
@@ -238,28 +280,29 @@ body {
       float: left; }
       .wrap .footer .logo img {
         width: 240px;
-        height: 120px;
-        margin-top: 15px; }
+        height: 100px;
+        margin-top: 25px; }
     .wrap .footer .alldata {
       width: 320px;
       height: 100%;
       float: left; }
       .wrap .footer .alldata .datacont {
         width: 315px;
-        height: 120px;
-        margin-top: 15px;
+        height: 100px;
+        margin-top: 25px;
         border-left: 5px solid #06AEF5; }
         .wrap .footer .alldata .datacont p {
           color: #fff;
           font-size: 20px;
-          padding-top: 25px;
+          padding-top: 20px;
           padding-left: 15px; }
           .wrap .footer .alldata .datacont p span {
             float: right; }
     .wrap .footer .chart {
       width: 1380px;
       height: 100%;
-      float: left; }
+      float: left;
+      margin-top: 5px; }
       .wrap .footer .chart .cheader {
         height: 38px; }
         .wrap .footer .chart .cheader p {
@@ -270,17 +313,17 @@ body {
         .wrap .footer .chart .cheader .labels {
           float: right;
           position: relative;
-          top: 15px;
+          top: 14px;
           right: 20px;
           color: #fff;
-          width: 200px;
-          line-height: 20px; }
+          width: 105px;
+          line-height: 14px; }
           .wrap .footer .chart .cheader .labels .back1, .wrap .footer .chart .cheader .labels .back2, .wrap .footer .chart .cheader .labels span {
             float: left;
-            font-size: 18px; }
+            font-size: 14px; }
           .wrap .footer .chart .cheader .labels .back1, .wrap .footer .chart .cheader .labels .back2 {
-            width: 20px;
-            height: 20px;
+            width: 14px;
+            height: 14px;
             margin-left: 10px; }
           .wrap .footer .chart .cheader .labels .back1 {
             background: yellow; }
